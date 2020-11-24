@@ -1,0 +1,6 @@
+query($role: Int!){
+  usersByRole(role: $role){
+    id
+    fullname
+  }
+}

@@ -1,0 +1,13 @@
+query {
+  posts {
+    id
+    title
+    published
+    featured
+    enable_comments
+    user {
+      id
+      fullname
+    }
+  }
+}

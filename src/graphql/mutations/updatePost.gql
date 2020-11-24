@@ -1,0 +1,27 @@
+mutation(
+  $id: ID!
+  $title: String!
+  $content: String!
+  $published: Boolean!
+  $description: String!
+  $featured: Boolean!
+  $enable_comments: Boolean!
+  $category_id: Int!
+  $user_id: Int!
+  $tags: [ID!]
+) {
+  updatePost(
+    id: $id
+    title: $title
+    content: $content
+    description: $description
+    published: $published
+    featured: $featured
+    enable_comments: $enable_comments
+    category_id: $category_id
+    user_id: $user_id
+    tags: $tags
+  ) {
+    id
+  }
+}

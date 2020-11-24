@@ -1,0 +1,13 @@
+query{
+  comments{
+    id
+    content
+    approved
+    created_at
+    user{
+      id
+      username
+      avatar
+    }
+  }
+}

@@ -1,0 +1,9 @@
+query($id: ID!){
+  user(id: $id){
+    fullname
+    username
+    phone
+    email
+    role
+  }
+}

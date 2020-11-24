@@ -1,0 +1,16 @@
+mutation($input: LoginInput){
+  adminLogin(input: $input){
+    access_token
+    token_type
+    user{
+      id
+      fullname
+      username
+      phone
+      bio
+      role
+      email
+      avatar
+    }
+  }
+}

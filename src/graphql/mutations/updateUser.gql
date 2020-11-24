@@ -1,0 +1,12 @@
+mutation($id:ID!,$fullname: String!,$username: String!,$bio: String,$phone: String,$email: String!,$role: Int!){
+  user: updateUser(id:$id,fullname: $fullname, username: $username,bio: $bio, phone: $phone, email: $email, role: $role){
+    id
+    fullname
+    phone
+    email
+    username
+    avatar
+    role
+    bio
+  }
+}

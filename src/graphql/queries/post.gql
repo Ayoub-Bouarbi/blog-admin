@@ -1,0 +1,20 @@
+query($id: ID!){
+  post(id: $id){
+    title
+    description
+    content
+    category{
+      id
+    }
+    user{
+      id
+    }
+    enable_comments
+    featured
+    published
+    tags{
+      id
+    }
+    
+  }
+}

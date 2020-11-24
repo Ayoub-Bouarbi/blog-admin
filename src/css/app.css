@@ -1,0 +1,9 @@
+
+@import '~material-design-iconic-font/dist/css/material-design-iconic-font.min.css';
+@import '~font-awesome/css/font-awesome.min.css';
+@import '~@desislavsd/vue-select/dist/vue-select.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
+@import "~izitoast/dist/css/iziToast.css";
+@import './_main.css';
