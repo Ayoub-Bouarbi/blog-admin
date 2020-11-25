@@ -1,14 +1,29 @@
 # Admin Panel For blog
 
-## How to Setup
-
-1. npm install
-2. npm run serve
-
-if you want to run the project in desktop 
-
-Run
-1. npm run electron:serve
+## Dependencies
+1. Vue.js
+2. Apollo.js
+3. Electron-vue
+4. npm
 
 
-enjoy!!
+## Getting Started
+
+
+``` diff
+# clone the project
+  git clone https://github.com/Ayoub-Bouarbi/blog-client.git
+
+# enter the project directory
+  cd blog-client
+
+# install dependency
+  npm install
+
+# start
+  npm run start
+
+# to run electron app
+  npm run electron:serve
+
+```
