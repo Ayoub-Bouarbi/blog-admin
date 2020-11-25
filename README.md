@@ -12,10 +12,10 @@
 
 ``` diff
 # clone the project
-  git clone https://github.com/Ayoub-Bouarbi/blog-client.git
+  git clone https://github.com/Ayoub-Bouarbi/blog-admin.git
 
 # enter the project directory
-  cd blog-client
+  cd blog-admin
 
 # install dependency
   npm install
