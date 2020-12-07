@@ -14,7 +14,8 @@
                 <div class="card">
                   <div class="user_title">
                     <label for="image" style="cursor:pointer;">
-                      <img :src="avatar" name="aboutme" class="img-circle">
+                      <img v-if="$store.getters.getUser.avatar != null" :src="avatar" name="aboutme" class="img-circle">
+                      <img v-else src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" class="img-circle">
                     </label>
                   </div>
                   <div class="card-footer" style="font-size:12px">
@@ -151,7 +152,7 @@
           this.phone = this.$store.getters.getUser.phone;
           this.bio = this.$store.getters.getUser.bio;
           this.role = this.$store.getters.getUser.role;
-          this.avatar = this.$store.getters.getUser.avatar != null ? 'http://blog_api.test/storage/uploads/' + this.$store.getters.getUser.avatar : 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R';
+          this.avatar = process.env.VUE_APP_HTTP + '/storage/uploads/' + this.$store.getters.getUser.avatar;
     },
     methods: {
       changePhoto(e) {

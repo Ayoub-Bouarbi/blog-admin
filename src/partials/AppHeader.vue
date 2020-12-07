@@ -7,7 +7,7 @@
                     <div class="header-wrap2">
                         <div class="logo d-block d-lg-none">
                             <router-link :to="{name: 'login'}">
-                                <img src="../assets/images/icon/logo-white.png" alt="CoolAdmin" />
+                                <img src="../static/logo-white.png" alt="CoolAdmin" />
                             </router-link>
                         </div>
                         <div class="header-button-item js-item-menu" @click="show = !show" :class="{'show-dropdown': show}">

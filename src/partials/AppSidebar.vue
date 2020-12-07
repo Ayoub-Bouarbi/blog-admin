@@ -4,13 +4,14 @@
         <aside class="menu-sidebar2">
             <div class="logo">
                 <router-link :to="{name: 'home'}">
-                    <img src="../assets/images/icon/logo-white.png" alt="Cool Admin" />
+                    <img src="../static/logo-white.png" alt="Cool Admin" />
                 </router-link>
             </div>
             <div class="menu-sidebar2__content js-scrollbar1">
                 <div class="account2">
                     <div class="image img-cir img-120">
-                        <img :src="$store.getters.getUser.avatar != null ? 'http://blog_api.test/storage/uploads/' + $store.getters.getUser.avatar : 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R'" alt="John Doe" />
+                        <img v-if="$store.getters.getUser.avatar != null" :src="imgUrl" alt="John Doe" />
+                        <img v-else src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" alt="John Doe" />
                     </div>
                     <h4 class="name">{{ $store.getters.getUser.username }}</h4>
                     <a @click="signOut">Sign out</a>
@@ -79,6 +80,11 @@
                 })
             }
         },
+        computed: {
+            imgUrl(){
+                return process.env.VUE_APP_HTTP + '/storage/uploads/' + this.$store.getters.getUser.avatar;
+            }
+        }
     }
 
 </script>

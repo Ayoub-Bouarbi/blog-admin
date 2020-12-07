@@ -9,10 +9,10 @@ export default new Vuex.Store({
         user: JSON.parse(localStorage.getItem('user')),
     },
     mutations: {
-        setToken(state,user){
+        setUser(state,user){
             state.user = user;
         },
-        destroyToken(state){
+        destroyUser(state){
             localStorage.removeItem('user');
             state.user = null;
         }
@@ -29,10 +29,10 @@ export default new Vuex.Store({
         storeUserData({commit},user){
             localStorage.setItem('user',JSON.stringify(user));
             
-            commit('setToken',user);
+            commit('setUser',user);
         },
         logout({commit}){
-            commit('destroyToken');
+            commit('destroyUser');
         },
     },
     modules: {}
